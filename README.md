@@ -8,7 +8,10 @@ EQEmulator on Kubernetes
 - [Helm](https://helm.sh/docs/intro/install/)
 
 ## Steps
-- `make kind-local-up`
+- `make up` spin up a local k8s kind instance
+- `make install` install CRDS for kind instance
+- `make run` run the operator as a standalone binary that connects
+
 
 ## Developer Requirements
 - [Kubebuilder](https://book.kubebuilder.io/quick-start.html#installation)
