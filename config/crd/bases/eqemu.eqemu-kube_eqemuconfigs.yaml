@@ -1,0 +1,179 @@
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.11.3
+  creationTimestamp: null
+  name: eqemuconfigs.eqemu.eqemu-kube
+spec:
+  group: eqemu.eqemu-kube
+  names:
+    kind: EQEmuConfig
+    listKind: EQEmuConfigList
+    plural: eqemuconfigs
+    singular: eqemuconfig
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        description: EQEmuConfig is the Schema for the eqemuconfigs API
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: EQEmuConfigSpec defines the desired state of EQEmuConfig
+            properties:
+              chatserver.host:
+                type: string
+              chatserver.port:
+                type: string
+              database.db:
+                type: string
+              database.host:
+                type: string
+              database.password:
+                type: string
+              database.port:
+                type: string
+              database.username:
+                type: string
+              directories.opcodes:
+                type: string
+              directories.patches:
+                type: string
+              files.mail_opcodes:
+                type: string
+              files.opcodes:
+                type: string
+              mailserver.host:
+                type: string
+              mailserver.port:
+                type: string
+              qsdatabase.db:
+                type: string
+              qsdatabase.host:
+                type: string
+              qsdatabase.password:
+                type: string
+              qsdatabase.port:
+                type: string
+              qsdatabase.username:
+                type: string
+              world.key:
+                type: string
+              world.loginserver1.account:
+                type: string
+              world.loginserver1.host:
+                type: string
+              world.loginserver1.legacy:
+                type: string
+              world.loginserver1.password:
+                type: string
+              world.loginserver1.port:
+                type: string
+              world.loginserver2.account:
+                type: string
+              world.loginserver2.host:
+                type: string
+              world.loginserver2.legacy:
+                type: string
+              world.loginserver2.password:
+                type: string
+              world.loginserver2.port:
+                type: string
+              world.loginserver3.account:
+                type: string
+              world.loginserver3.host:
+                type: string
+              world.loginserver3.legacy:
+                type: string
+              world.loginserver3.password:
+                type: string
+              world.loginserver3.port:
+                type: string
+              world.longname:
+                type: string
+              world.shortname:
+                type: string
+              world.tcp.ip:
+                type: string
+              world.tcp.port:
+                type: string
+              world.telnet.enabled:
+                type: string
+              world.telnet.ip:
+                type: string
+              world.telnet.port:
+                type: string
+              zones.defaultstatus:
+                type: string
+              zones.ports.high:
+                type: string
+              zones.ports.low:
+                type: string
+            required:
+            - chatserver.host
+            - chatserver.port
+            - database.db
+            - database.host
+            - database.password
+            - database.port
+            - database.username
+            - directories.opcodes
+            - directories.patches
+            - files.mail_opcodes
+            - files.opcodes
+            - mailserver.host
+            - mailserver.port
+            - qsdatabase.db
+            - qsdatabase.host
+            - qsdatabase.password
+            - qsdatabase.port
+            - qsdatabase.username
+            - world.key
+            - world.loginserver1.account
+            - world.loginserver1.host
+            - world.loginserver1.legacy
+            - world.loginserver1.password
+            - world.loginserver1.port
+            - world.loginserver2.account
+            - world.loginserver2.host
+            - world.loginserver2.legacy
+            - world.loginserver2.password
+            - world.loginserver2.port
+            - world.loginserver3.account
+            - world.loginserver3.host
+            - world.loginserver3.legacy
+            - world.loginserver3.password
+            - world.loginserver3.port
+            - world.longname
+            - world.shortname
+            - world.tcp.ip
+            - world.tcp.port
+            - world.telnet.enabled
+            - world.telnet.ip
+            - world.telnet.port
+            - zones.defaultstatus
+            - zones.ports.high
+            - zones.ports.low
+            type: object
+          status:
+            description: EQEmuConfigStatus defines the observed state of EQEmuConfig
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}

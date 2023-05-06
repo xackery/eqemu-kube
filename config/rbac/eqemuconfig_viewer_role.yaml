@@ -1,0 +1,27 @@
+# permissions for end users to view eqemuconfigs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: eqemuconfig-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: eqemu-kube
+    app.kubernetes.io/part-of: eqemu-kube
+    app.kubernetes.io/managed-by: kustomize
+  name: eqemuconfig-viewer-role
+rules:
+- apiGroups:
+  - eqemu.eqemu-kube
+  resources:
+  - eqemuconfigs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - eqemu.eqemu-kube
+  resources:
+  - eqemuconfigs/status
+  verbs:
+  - get

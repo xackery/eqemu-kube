@@ -1,0 +1,12 @@
+apiVersion: eqemu.eqemu-kube/v1
+kind: EQEmuConfig
+metadata:
+  labels:
+    app.kubernetes.io/name: eqemuconfig
+    app.kubernetes.io/instance: eqemuconfig-sample
+    app.kubernetes.io/part-of: eqemu-kube
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: eqemu-kube
+  name: eqemuconfig-sample
+spec:
+  # TODO(user): Add fields here
